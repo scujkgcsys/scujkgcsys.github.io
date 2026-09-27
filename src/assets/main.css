@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-white font-sans text-ink-900 antialiased;
+  }
+  ::selection {
+    @apply bg-brand-200 text-brand-900;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+  .card {
+    @apply rounded-2xl border border-ink-100 bg-white shadow-card transition;
+  }
+  .card-hover {
+    @apply hover:-translate-y-1 hover:border-brand-200 hover:shadow-[0_18px_40px_-20px_rgba(27,86,241,.45)];
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 text-white hover:bg-brand-700 active:bg-brand-800;
+  }
+  .btn-ghost {
+    @apply btn border border-ink-200 bg-white text-ink-800 hover:border-brand-300 hover:text-brand-700;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-white px-3 py-1.5 text-xs font-medium text-ink-600 transition;
+  }
+  .chip-active {
+    @apply border-brand-500 bg-brand-600 text-white;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-md px-2 py-0.5 text-[11px] font-semibold tracking-wide;
+  }
+  .label {
+    @apply text-xs font-semibold uppercase tracking-widest text-brand-600;
+  }
+  .grid-pattern {
+    background-image: linear-gradient(rgba(27, 86, 241, .09) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(27, 86, 241, .09) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-ink-200;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-ink-400;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .18s ease, transform .18s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* 灯箱/弹窗动画 */
+.pop-enter-active,
+.pop-leave-active {
+  transition: opacity .2s ease;
+}
+.pop-enter-from,
+.pop-leave-to {
+  opacity: 0;
+}

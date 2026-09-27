@@ -1,0 +1,89 @@
+{
+  "name": { "zh": "健康工程实验室", "en": "Health Engineering Laboratory" },
+  "shortName": { "zh": "HEL", "en": "HEL" },
+  "affiliation": { "zh": "建筑与环境学院", "en": "College of Architecture and Environment" },
+  "university": { "zh": "四川大学", "en": "Sichuan University" },
+  "tagline": {
+    "zh": "口腔/肌骨系统健康工程 · 仿生功能材料 · 医疗平台及器械开发",
+    "en": "Oral & Musculoskeletal Health Engineering · Biomimetic & Functional Materials · Medical Platforms & Devices"
+  },
+  "intro": {
+    "zh": "实验室依托生物力学工程省重点实验室，主要从事口腔/肌骨系统健康工程和仿生/功能材料的研究及医疗平台及器械开发。负责人主持科研项目 20 余项；以第一/通讯作者发表 SCI 论文 100 余篇；获四川省医学科技二等奖 1 项；多次担任国际/全国学术会议分会场主席并作邀请报告。担任多本国内/国际杂志编委、常务编委、副主编；受聘哈佛医学院/麻省总医院顾问/研究员；入选四川省海外高层次留学人才、四川省学术和技术带头人后备人选，并连续入选前三届全国生物力学青年学者学术研讨会（每届全国 40 人，三届同时入选者仅 5 人）。",
+    "en": "Hosted by the Key Laboratory of Biomechanical Engineering of Sichuan Province, the lab focuses on oral and musculoskeletal health engineering, biomimetic and functional materials, and the development of medical platforms and devices. The PI has led more than 20 research projects and published over 100 SCI papers as first or corresponding author, and received the Second Prize of Sichuan Medical Science and Technology Award. He has served as session chair and invited speaker at international and national conferences, and as editorial board member, standing editorial board member and associate editor of several journals. He is a consultant/research fellow at Harvard Medical School / Massachusetts General Hospital, a recipient of the Sichuan Provincial High-level Overseas Talent Program, and one of only five scholars selected for all three of the first National Symposiums for Young Biomechanics Scholars (40 scholars each)."
+  },
+  "location": {
+    "zh": "四川大学（望江校区）建筑与环境学院 · 生物力学工程省重点实验室",
+    "en": "Key Laboratory of Biomechanical Engineering of Sichuan Province, Wangjiang Campus, Sichuan University"
+  },
+  "email": "bmeliuzhan@163.com",
+  "phone": "028-85405140 (兼传真)",
+  "links": [
+    {
+      "label": { "zh": "刘展教授主页", "en": "Prof. Zhan Liu" },
+      "url": "https://acem.scu.edu.cn/info/1028/13087.htm"
+    },
+    {
+      "label": { "zh": "川大建筑与环境学院", "en": "College of Architecture & Environment" },
+      "url": "https://acem.scu.edu.cn/"
+    }
+  ],
+  "researchAreas": [
+    {
+      "id": "biomech",
+      "icon": "heart",
+      "title": { "zh": "生物医学工程", "en": "Biomedical Engineering" },
+      "summary": {
+        "zh": "围绕口腔颌面与肌骨系统的结构—功能关系开展生物力学研究，构建个体化三维有限元模型并结合实验验证，服务于疾病的机制阐释与临床方案评估。",
+        "en": "We investigate structure-function relationships of the craniofacial and musculoskeletal systems through biomechanics, building subject-specific 3D finite element models validated by experiments to illuminate disease mechanisms and evaluate clinical protocols."
+      },
+      "keywords": [
+        { "zh": "生物力学", "en": "Biomechanics" },
+        { "zh": "有限元分析", "en": "Finite Element Analysis" },
+        { "zh": "肌骨系统", "en": "Musculoskeletal System" }
+      ]
+    },
+    {
+      "id": "tmj",
+      "icon": "eye",
+      "title": { "zh": "颞下颌关节与口腔健康工程", "en": "TMJ & Oral Health Engineering" },
+      "summary": {
+        "zh": "聚焦颞下颌关节紊乱病（TMD）的运动学表征与力学调控，建立动态关节间隙、螺旋轴等关键指标的测量方法，并发展髁突运动导板等动态调控手段。同时开展正颌外科、隐形矫治与口腔修复相关的生物力学评价。",
+        "en": "Our work centers on kinematic characterization and mechanical modulation of temporomandibular disorders (TMD). We establish metrics such as dynamic joint space and finite helical axis, develop dynamic control devices such as condylar motion guides, and provide biomechanical evaluation for orthognathic surgery, clear aligner treatment and restorative dentistry."
+      },
+      "keywords": [
+        { "zh": "颞下颌关节", "en": "Temporomandibular Joint" },
+        { "zh": "牙颌面畸形", "en": "Maxillofacial Deformity" },
+        { "zh": "运动学测量", "en": "Kinematic Measurement" }
+      ]
+    },
+    {
+      "id": "device",
+      "icon": "chip",
+      "title": { "zh": "医疗平台及器械开发", "en": "Medical Platforms & Device Development" },
+      "summary": {
+        "zh": "开展医疗平台与器械的优化设计和性能验证，包括髋关节/膝关节假体界面受力分析、髓内钉固定评价、3D 打印矫形器力学检测、植体 anchorage 评估等工程转化工作。",
+        "en": "We conduct design optimization and performance validation of medical platforms and devices, including hip/knee prosthesis interface mechanics, intramedullary nail fixation, mechanical testing of 3D-printed orthoses, and anchorage evaluation."
+      },
+      "keywords": [
+        { "zh": "医疗器械", "en": "Medical Devices" },
+        { "zh": "关节假体", "en": "Joint Prosthesis" },
+        { "zh": "3D 打印矫形器", "en": "3D-Printed Orthoses" }
+      ]
+    },
+    {
+      "id": "material",
+      "icon": "sparkles",
+      "title": { "zh": "仿生与功能材料", "en": "Biomimetic & Functional Materials" },
+      "summary": {
+        "zh": "受鱼鳞、龙虾、褐鹈鹕等生物结构启发，研发透明柔软、抗裂损的高性能弹性体与水凝胶，并结合框架核酸等新材料开展主动靶向治疗研究。",
+        "en": "Inspired by structures such as fish scales, lobster and the brown pelican, we develop transparent, soft and crack-resistant high-performance elastomers, and explore framework nucleic acid based nanodevices for active targeting therapy."
+      },
+      "keywords": [
+        { "zh": "仿生材料", "en": "Biomimetic Materials" },
+        { "zh": "抗裂弹性体", "en": "Crack-resistant Elastomers" },
+        { "zh": "框架核酸", "en": "Framework Nucleic Acid" }
+      ]
+    }
+  ],
+  "news": []
+}

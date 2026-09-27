@@ -1,0 +1,301 @@
+[
+  {
+    "id": "p-nsfc-01",
+    "name": {
+      "zh": "关节盘前移位对颞下颌关节功能影响的生物力学实验和数值研究",
+      "en": "Experimental and numerical biomechanical study on the effect of anterior disc displacement on temporomandibular joint function"
+    },
+    "category": "nsfc",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-nsfc-02",
+    "name": {
+      "zh": "下颌升支矢状劈开截骨术对颞下颌关节功能影响的生物力学研究",
+      "en": "Biomechanical study on the effect of sagittal split ramus osteotomy on temporomandibular joint function"
+    },
+    "category": "nsfc",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-nsfc-03",
+    "name": {
+      "zh": "牙颌面创伤中大面积骨缺损及牙周修复重建关键技术的应用基础研究",
+      "en": "Applied fundamental research on key technologies for large bone defects and periodontal reconstruction in maxillofacial trauma"
+    },
+    "category": "nsfc-key",
+    "pi": "刘展",
+    "role": { "zh": "主研", "en": "Co-PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-central-01",
+    "name": {
+      "zh": "颞下颌关节紊乱的动态生物力学调控",
+      "en": "Dynamic biomechanical modulation of temporomandibular disorders"
+    },
+    "category": "central",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-central-02",
+    "name": {
+      "zh": "下肢残肢肌肉萎缩的生物力学研究（重点基础研究专项）",
+      "en": "Biomechanics of muscle atrophy in lower-limb residual limbs (Key Basic Research Program)"
+    },
+    "category": "central",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-coop-01",
+    "name": {
+      "zh": "竞技体育运动中颞下颌关节的冲击响应及防护",
+      "en": "Impact response and protection of the temporomandibular joint in competitive sports"
+    },
+    "category": "cooperation",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-coop-02",
+    "name": {
+      "zh": "根治颞下颌关节紊乱的髁突运动导板动态调控",
+      "en": "Dynamic regulation of condylar motion guides for the radical treatment of temporomandibular disorders"
+    },
+    "category": "cooperation",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-uni-01",
+    "name": {
+      "zh": "正颌外科手术及术后颌骨改建的生物力学研究",
+      "en": "Biomechanical study of orthognathic surgery and post-operative mandibular remodeling"
+    },
+    "category": "university",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-01",
+    "name": {
+      "zh": "飞机乘员头颈部生物力学碰撞模型开发和验证",
+      "en": "Development and validation of a head-neck impact biomechanics model for aircraft occupants"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-02",
+    "name": {
+      "zh": "举重鞋材料性能分析",
+      "en": "Material performance analysis of weightlifting shoes"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-03",
+    "name": {
+      "zh": "3D 打印矫形器力学性能检测",
+      "en": "Mechanical testing of 3D-printed orthoses"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-04",
+    "name": {
+      "zh": "高性能数值计算",
+      "en": "High-performance numerical computing"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-05",
+    "name": {
+      "zh": "四类颌骨及牙的生物力学建模",
+      "en": "Biomechanical modeling of four types of jaw and tooth structures"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-06",
+    "name": {
+      "zh": "椎体内骨水泥稳定性的生物力学研究",
+      "en": "Biomechanical study on the stability of bone cement within vertebral bodies"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-07",
+    "name": {
+      "zh": "牙齿根管机械预备对牙根折裂影响的生物力学研究",
+      "en": "Biomechanical study on the effect of mechanical root canal preparation on root fracture"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-08",
+    "name": {
+      "zh": "复合树脂充填窝洞时不同垫底材料的三维有限元分析",
+      "en": "Three-dimensional finite element analysis of different base materials in composite resin restorations"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-09",
+    "name": {
+      "zh": "无托槽隐形矫治前牙拥挤的生物力学研究基础建模及有限元分析",
+      "en": "Biomechanical modeling and finite element analysis of clear aligner treatment for anterior crowding"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-10",
+    "name": {
+      "zh": "新研制的股骨近端髓内钉与国产 Gamma 钉固定不稳定股骨转子间骨折的三维有限元分析",
+      "en": "3D finite element analysis of a newly developed proximal femoral nail versus domestic Gamma nail for unstable intertrochanteric fractures"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-11",
+    "name": {
+      "zh": "高位髋关节脱位患者行全髋关节置换后有限元分析",
+      "en": "Finite element analysis after total hip arthroplasty in patients with high hip dislocation"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-12",
+    "name": {
+      "zh": "Crowe IV 型 DDH 患者 THA 后三维有限元分析",
+      "en": "Three-dimensional finite element analysis after THA in patients with Crowe type IV DDH"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-13",
+    "name": {
+      "zh": "大段骨缺损膜引导性骨再生三维有限元分析",
+      "en": "Three-dimensional finite element analysis of guided bone regeneration membranes for large bone defects"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-14",
+    "name": {
+      "zh": "建立及分析“微种植体—拔牙创—移动牙—颌骨”三维有限元模型",
+      "en": "Construction and analysis of a 3D finite element model of the micro-implant, extraction socket, moving tooth and jaw complex"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  },
+  {
+    "id": "p-hx-15",
+    "name": {
+      "zh": "两种不同材质胫骨侧肿瘤膝关节假体界面受力三维有限元研究",
+      "en": "3D finite element study of interface mechanics in tibial tumor knee prostheses made of two different materials"
+    },
+    "category": "horizontal",
+    "pi": "刘展",
+    "role": { "zh": "主持", "en": "PI" },
+    "period": "",
+    "amount": "",
+    "desc": { "zh": "", "en": "" }
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "liu-zhan",
+    "name": { "zh": "刘展", "en": "Zhan Liu" },
+    "role": "pi",
+    "title": { "zh": "教授 / 博士生导师", "en": "Professor / Ph.D. Supervisor" },
+    "email": "bmeliuzhan@163.com",
+    "homepage": "https://acem.scu.edu.cn/info/1028/13087.htm",
+    "scholar": "",
+    "year": "2016",
+    "interests": [
+      { "zh": "生物医学工程", "en": "Biomedical Engineering" },
+      { "zh": "健康工程", "en": "Health Engineering" },
+      { "zh": "医疗平台及器械开发", "en": "Medical Devices" },
+      { "zh": "仿生/功能材料", "en": "Biomimetic Materials" }
+    ],
+    "bio": {
+      "zh": "四川大学建筑与环境学院教授、博士生导师，生物力学工程省重点实验室骨干。2000、2003、2006 年分别于四川大学获学士、硕士、博士学位，2003 年起留校任教（助教、讲师、副教授、教授），2014.3—2016.3 赴美国哈佛大学做访问学者。主要从事口腔/肌骨系统健康工程和仿生/功能材料的研究及医疗平台及器械开发。主持科研项目 20 余项（含国家自然科学基金项目），以第一/通讯作者发表 SCI 论文 100 余篇，获 2009 年四川省医学科技二等奖。\n\n兼任 Associate Editor, Medicine in Novel Technology and Devices；Guest Editor, Frontiers in Bioengineering and Biotechnology 与 Applied Sciences；《医用生物力学》《中国修复重建外科杂志》编委、《中华医学研究杂志》常务编委；World Association for Chinese Biomedical Engineers 终身会员及委员、中国生物材料学会材料生物力学分会委员、中国生物医学工程学会终身会员；担任 Journal of Biomechanics、Journal of Dental Research、Medical Engineering & Physics 等十余本期刊审稿人。哈佛医学院/麻省总医院顾问/研究员；四川省海外高层次留学人才；四川省学术和技术带头人后备人选。连续入选前三届全国生物力学青年学者学术研讨会（每届全国 40 人，三届同时入选者仅 5 人）。\n\n开设课程：《力学通用软件及应用》《数值建模与仿真》《图像处理及绘制》《数值仿真工程案例赏析》。",
+      "en": "Professor and Ph.D. supervisor in the College of Architecture and Environment, Sichuan University, and a core member of the Key Laboratory of Biomechanical Engineering of Sichuan Province. He received his B.Eng., M.Eng. and Ph.D. from Sichuan University in 2000, 2003 and 2006, joined the faculty in 2003 (assistant lecturer, lecturer, associate professor and then professor), and was a visiting scholar at Harvard University from March 2014 to March 2016. His research covers oral and musculoskeletal health engineering, biomimetic and functional materials, and medical platform/device development. He has led more than 20 research projects including NSFC grants, published over 100 SCI papers as first/corresponding author, and received the Second Prize of Sichuan Medical Science and Technology Award (2009).\n\nHe serves as Associate Editor of Medicine in Novel Technology and Devices, Guest Editor of Frontiers in Bioengineering and Biotechnology and Applied Sciences, editorial board member of Journal of Medical Biomechanics and Chinese Journal of Reparative and Reconstructive Surgery, standing editorial board member of Chinese Journal of Medical Research, life member and committee member of the World Association for Chinese Biomedical Engineers, committee member of the Biomechanics Branch of the Chinese Society for Biomaterials, and life member of the Chinese Society of Biomedical Engineering. He reviews for more than ten journals including Journal of Biomechanics, Journal of Dental Research and Medical Engineering & Physics. He is a consultant/research fellow at Harvard Medical School / Massachusetts General Hospital, a recipient of the Sichuan Provincial High-level Overseas Talent Program, a candidate for Sichuan Provincial Academic and Technical Leader, and one of only five scholars selected for all three of the first National Symposiums for Young Biomechanics Scholars (40 scholars each).\n\nCourses: General Mechanical Software and Applications, Numerical Modeling and Simulation, Image Processing and Rendering, and Case Studies of Numerical Simulation in Engineering."
+    }
+  }
+]
