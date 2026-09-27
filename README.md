@@ -235,6 +235,8 @@ GitHub 仓库 **Settings → Pages → Custom domain** 填入域名（如 `hel.s
 
 因此：若你在 `src/data/*.json` 里更换联系邮箱，页面会自动套用同样的防爬显示，无需额外处理。
 
+> **想更彻底？** 把 `src/data/site.json`、`members.json` 里的邮箱直接写成 `bmeliuzhan [at] 163.com` 形式即可——代码已兼容两种写法，这样连打包后的 JS 内部也不会出现 `@` 形式的完整邮箱。
+
 ## 六、常见问题
 
 - **双击 index.html 打不开？** 用 `npm run build` 产出的 `dist/index.html`（单文件版）即可，不要在 `src` 上直接改 HTML。
