@@ -3,6 +3,7 @@ import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useTx } from '@/composables/useTx'
 import { avatarData } from '@/utils/media'
+import { openMail } from '@/utils/contact'
 
 const props = defineProps({
   person: { type: Object, required: true }
@@ -74,7 +75,8 @@ const isShortBio = computed(() => bio.value.length <= 90)
     <div class="mt-4 flex flex-wrap items-center gap-3 border-t border-ink-100 pt-4">
       <a
         v-if="person.email"
-        :href="`mailto:${person.email}`"
+        href="#"
+        @click.prevent="openMail(person.email)"
         class="inline-flex items-center gap-1 text-xs text-ink-600 transition hover:text-brand-700"
       >
         <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">

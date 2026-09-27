@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useTx } from '@/composables/useTx'
+import { displayEmail, openMail } from '@/utils/contact'
 import site from '@/data/site.json'
 
 const { t, locale } = useI18n()
@@ -58,8 +59,13 @@ const external = computed(() => site.links || [])
         <ul class="mt-4 space-y-2.5 text-sm text-ink-600">
           <li>{{ tx(site.location) }}</li>
           <li>
-            <a :href="`mailto:${site.email}`" class="transition hover:text-brand-700">
-              {{ site.email }}
+            <a
+              href="#"
+              class="transition hover:text-brand-700"
+              :title="t('contact.email')"
+              @click.prevent="openMail(site.email)"
+            >
+              {{ displayEmail(site.email) }}
             </a>
           </li>
           <li>{{ site.phone }}</li>

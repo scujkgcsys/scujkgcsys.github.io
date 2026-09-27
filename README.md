@@ -224,7 +224,18 @@ git push -u origin main
 
 GitHub 仓库 **Settings → Pages → Custom domain** 填入域名（如 `hel.scu.edu.cn`），然后到你的域名解析商加一条 CNAME 记录指向 `<用户名>.github.io`。GitHub 会自动签发 HTTPS 证书。
 
-## 五、常见问题
+## 五、版权与许可
+
+- **源代码**：MIT 许可（见 `LICENSE`），可自由使用、修改和分发。
+- **网页内容与图片**：文字、数据（成员/论文/项目清单）、照片以及实验室名称与标识，版权归**四川大学健康工程实验室**所有；未经书面许可不得用于商业用途或整体复制建站。
+
+### 邮箱防爬说明
+
+页面上的邮箱渲染为 `bmeliuzhan [at] 163.com`，真实地址在点击时由 JS 组装成 `mailto:` 打开——**查看网页源码（含打包后的 `index.html`）都看不到完整邮箱**，可显著降低爬虫抓取，同时不影响正常访客一键发信。
+
+因此：若你在 `src/data/*.json` 里更换联系邮箱，页面会自动套用同样的防爬显示，无需额外处理。
+
+## 六、常见问题
 
 - **双击 index.html 打不开？** 用 `npm run build` 产出的 `dist/index.html`（单文件版）即可，不要在 `src` 上直接改 HTML。
 - **改了 JSON 但页面没变？** 必须重新 `npm run build`；本地开发时用 `npm run dev` 会自动热更新。

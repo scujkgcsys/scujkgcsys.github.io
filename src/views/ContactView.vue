@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useTx } from '@/composables/useTx'
 import SectionHeader from '@/components/SectionHeader.vue'
+import { displayEmail, openMail } from '@/utils/contact'
 import site from '@/data/site.json'
 
 const { t } = useI18n()
@@ -15,7 +16,12 @@ const contacts = computed(() => [
     value: `${tx(site.university)} ${tx(site.affiliation)} · ${tx(site.location)}`,
     href: ''
   },
-  { key: 'email', label: t('contact.email'), value: site.email, href: `mailto:${site.email}` },
+  {
+    key: 'email',
+    label: t('contact.email'),
+    value: displayEmail(site.email),
+    mail: site.email
+  },
   { key: 'phone', label: t('contact.phone'), value: site.phone, href: `tel:${site.phone.replace(/[^+\d]/g, '')}` }
 ])
 </script>
@@ -57,7 +63,21 @@ const contacts = computed(() => [
               <div class="min-w-0">
                 <dt class="text-xs text-ink-400">{{ c.label }}</dt>
                 <dd class="break-all text-sm font-medium text-ink-800">
-                  <a v-if="c.href" :href="c.href" class="hover:text-brand-700">{{ c.value }}</a>
+                  <a
+                    v-if="c.mail"
+                    href="#"
+                    class="hover:text-brand-700"
+                    @click.prevent="openMail(c.mail)"
+                  >
+                    {{ c.value }}
+                  </a>
+                  <a
+                    v-else-if="c.href"
+                    :href="c.href"
+                    class="hover:text-brand-700"
+                  >
+                    {{ c.value }}
+                  </a>
                   <span v-else>{{ c.value }}</span>
                 </dd>
               </div>
@@ -104,8 +124,12 @@ const contacts = computed(() => [
         <section class="card bg-gradient-to-br from-brand-600 to-brand-800 p-7 text-white">
           <h2 class="text-xl font-bold">{{ t('contact.admission') }}</h2>
           <p class="mt-3 text-sm leading-relaxed text-white/85">{{ t('contact.admissionText') }}</p>
-          <a :href="`mailto:${site.email}`" class="btn mt-6 bg-white text-brand-700 hover:bg-brand-50">
-            {{ site.email }}
+          <a
+            href="#"
+            class="btn mt-6 bg-white text-brand-700 hover:bg-brand-50"
+            @click.prevent="openMail(site.email)"
+          >
+            {{ displayEmail(site.email) }}
           </a>
         </section>
 

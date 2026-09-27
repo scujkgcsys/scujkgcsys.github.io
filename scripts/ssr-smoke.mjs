@@ -25,7 +25,7 @@ const CHECKS = [
   },
   {
     path: '/contact',
-    keywords: { zh: ['招生信息', 'bmeliuzhan@163.com'], en: ['Admissions', 'bmeliuzhan@163.com'] }
+    keywords: { zh: ['招生信息', 'bmeliuzhan [at] 163.com'], en: ['Admissions', 'bmeliuzhan [at] 163.com'] }
   }
 ]
 

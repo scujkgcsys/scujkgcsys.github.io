@@ -12,6 +12,7 @@ import publications from '@/data/publications.json'
 import activitiesData from '@/data/activities.json'
 import projects from '@/data/projects.json'
 import { formatDate, photoData, shortDate } from '@/utils/media'
+import { displayEmail, openMail } from '@/utils/contact'
 
 const router = useRouter()
 const { t } = useI18n()
@@ -136,8 +137,12 @@ function cover(activity) {
             <div class="mt-6 grid gap-3 sm:grid-cols-2">
               <div class="rounded-xl bg-ink-50 p-4">
                 <p class="text-xs text-ink-400">{{ t('contact.email') }}</p>
-                <a :href="`mailto:${site.email}`" class="text-sm font-medium text-brand-700 break-all">
-                  {{ site.email }}
+                <a
+                  href="#"
+                  class="break-all text-sm font-medium text-brand-700"
+                  @click.prevent="openMail(site.email)"
+                >
+                  {{ displayEmail(site.email) }}
                 </a>
               </div>
               <div class="rounded-xl bg-ink-50 p-4">

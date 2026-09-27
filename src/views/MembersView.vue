@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { useTx } from '@/composables/useTx'
 import SectionHeader from '@/components/SectionHeader.vue'
 import PersonCard from '@/components/PersonCard.vue'
+import { displayEmail, openMail } from '@/utils/contact'
 import members from '@/data/members.json'
 import site from '@/data/site.json'
 
@@ -65,8 +66,12 @@ const total = computed(() => members.length)
         {{ t('contact.admissionText') }}
       </p>
       <div class="mt-6 flex flex-wrap gap-3">
-        <a :href="`mailto:${site.email}`" class="btn bg-white text-brand-700 hover:bg-brand-50">
-          {{ site.email }}
+        <a
+          href="#"
+          class="btn bg-white text-brand-700 hover:bg-brand-50"
+          @click.prevent="openMail(site.email)"
+        >
+          {{ displayEmail(site.email) }}
         </a>
         <router-link
           to="/contact"

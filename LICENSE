@@ -1,0 +1,39 @@
+MIT License
+
+Copyright (c) 2026 Health Engineering Laboratory, Sichuan University
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+版权补充说明 / Additional copyright notice
+
+本许可仅涵盖本仓库中的源代码（Source Code）。
+
+网站中的文字内容、数据（含成员信息、论文与项目清单）、图片、照片以及
+四川大学健康工程实验室的名称与标识，版权均归四川大学健康工程实验室所有。
+未经书面许可，不得将上述内容用于商业用途，亦不得整体复制本站用于建立
+竞争性或误导性的网站。
+
+This license covers the source code in this repository only.
+The textual content, data (including member, publication and project records),
+images and photographs, as well as the name and logo of the Health Engineering
+Laboratory of Sichuan University, remain the property of the Health Engineering
+Laboratory. Commercial use of such content, or copying this site as a whole to
+create a competing or misleading website, requires prior written permission.
