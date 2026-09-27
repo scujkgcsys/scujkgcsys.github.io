@@ -191,9 +191,17 @@ git push -u origin main
 2. 进入仓库 **Settings → Pages → Source**，选 **GitHub Actions**；
 3. 推送一次提交，Actions 跑完后会给出访问地址 `https://<用户名>.github.io/<仓库名>/`。
 
-### 做法 B：只托管成品文件
+### 做法 B：Deploy from branch（Actions 不可用时的兜底）
 
-如果不想跑构建，把 `dist/index.html` 复制到仓库根目录提交，然后 Settings → Pages → Deploy from branch → 选分支和根目录。因为产物是单文件，这样也能直接访问。
+仓库里的 `docs/index.html` 就是打包好的成品（每次 `npm run build` 自动同步）。
+
+Settings → Pages → **Deploy from branch** → 分支 `main`、目录 **`/docs`** → Save。
+
+> 注意不要选根目录 `/`：仓库根目录的 `index.html` 是 Vite 源码入口，直接部署会白屏。
+
+### 做法 C：只托管成品文件
+
+把 `dist/index.html` 复制到仓库根目录提交，然后 Settings → Pages → Deploy from branch → 选分支和根目录。因为产物是单文件，这样也能直接访问。
 
 > 提示：GitHub Pages 访问路径带仓库名（子目录），本项目已使用相对路径 + hash 路由，子目录部署无需任何配置。
 

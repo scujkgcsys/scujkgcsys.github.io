@@ -61,5 +61,15 @@ for (const dir of ['assets']) {
 
 fs.writeFileSync(htmlPath, html, 'utf-8')
 
+// 同步一份到 docs/：可用 Pages 的「Deploy from branch + /docs」作兜底方案（不依赖 Actions）
+const docsDir = path.join(process.cwd(), 'docs')
+fs.mkdirSync(docsDir, { recursive: true })
+fs.copyFileSync(htmlPath, path.join(docsDir, 'index.html'))
+const distImages = path.join(distDir, 'images')
+if (fs.existsSync(distImages)) {
+  fs.cpSync(distImages, path.join(docsDir, 'images'), { recursive: true })
+}
+
 const sizeKb = (fs.statSync(htmlPath).size / 1024).toFixed(1)
 console.log(`已内联 ${inlinedCount} 个资源 → dist/index.html（${sizeKb} KB，单文件，可直接双击打开）`)
+console.log('已同步一份到 docs/index.html（供 Pages 的 Deploy from branch 兜底使用）')
