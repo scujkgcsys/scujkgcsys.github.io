@@ -26,6 +26,13 @@ const CHECKS = [
   {
     path: '/contact',
     keywords: { zh: ['招生信息', 'bmeliuzhan [at] 163.com'], en: ['Admissions', 'bmeliuzhan [at] 163.com'] }
+  },
+  {
+    // 管理后台仅在开发模式存在，用于验证组件本身可无异常渲染
+    path: '/admin',
+    minChars: 150,
+    onlyDev: true,
+    keywords: { zh: ['内容管理后台'], en: ['内容管理后台'] }
   }
 ]
 
@@ -42,6 +49,7 @@ try {
   const mod = await server.ssrLoadModule('/src/entry-ssr.js')
 
   for (const check of CHECKS) {
+    if (check.onlyDev && process.env.NODE_ENV === 'production') continue
     for (const locale of ['zh', 'en']) {
       const keywords = check.keywords[locale] || []
       let html = ''

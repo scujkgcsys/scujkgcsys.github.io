@@ -18,6 +18,10 @@ export const routes = [
   },
   { path: '/activities', name: 'activities', component: ActivitiesView, meta: { key: 'activities' } },
   { path: '/contact', name: 'contact', component: ContactView, meta: { key: 'contact' } },
+  // 内容管理后台：仅开发模式注册，不会进入生产产物
+  ...(import.meta.env.DEV
+    ? [{ path: '/admin', name: 'admin', component: () => import('@/views/AdminView.vue') }]
+    : []),
   { path: '/:pathMatch(.*)*', redirect: '/' }
 ]
 

@@ -8,7 +8,9 @@
     "build": "vite build && node scripts/inline-dist.mjs",
     "preview": "vite preview --host",
     "smoke": "node scripts/ssr-smoke.mjs",
-    "check:file": "node scripts/check-file-protocol.mjs"
+    "check:file": "node scripts/check-file-protocol.mjs",
+    "admin": "vite --open /#/admin",
+    "sync:orcid": "node scripts/sync-orcid.mjs"
   },
   "dependencies": {
     "vue": "^3.5.13",

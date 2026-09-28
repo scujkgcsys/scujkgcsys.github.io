@@ -1,11 +1,12 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import contentAdmin from './plugins/content-admin.js'
 
 export default defineConfig({
   // base 用相对路径：可部署到任意子目录
   base: './',
-  plugins: [vue()],
+  plugins: [vue(), contentAdmin()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

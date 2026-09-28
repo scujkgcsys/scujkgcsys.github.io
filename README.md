@@ -21,6 +21,12 @@ npm run preview
 
 # 渲染冒烟测试：逐路由检查中英双语是否正常渲染
 npm run smoke
+
+# 打开可视化内容管理后台（在浏览器里增删改内容，写回 JSON）
+npm run admin
+
+# 从 ORCID 同步最新成果，自动去重合并进 publications.json
+npm run sync:orcid
 ```
 
 Windows 本机若 `node` 不在 PATH，先执行：
@@ -245,7 +251,48 @@ GitHub 仓库 **Settings → Pages → Custom domain** 填入域名（如 `hel.s
 
 > **想更彻底？** 把 `src/data/site.json`、`members.json` 里的邮箱直接写成 `bmeliuzhan [at] 163.com` 形式即可——代码已兼容两种写法，这样连打包后的 JS 内部也不会出现 `@` 形式的完整邮箱。
 
-## 六、常见问题
+## 六、成果自动同步（ORCID / Scopus）
+
+Scopus 需机构订阅 API Key，无法直接对接；本项目改用**免费的 ORCID 公开 API**（作者本人维护，数据准确），并用 Crossref 补全作者列表与卷期页。
+
+```bash
+npm run sync:orcid                 # 使用默认 ORCID（刘展教授 0000-0001-7336-6685）
+npm run sync:orcid 0000-xxxx-xxxx  # 也可指定其他 ORCID
+```
+
+行为说明：
+
+- 按标题归一化**去重**，已有条目不会重复导入，也不会覆盖已填字段；
+- 自动剔除预印本（SSRN），解码 HTML 实体，并按年份倒序重排；
+- 需要补全作者列表时依赖 DOI，无 DOI 的条目作者字段会留空，可在管理后台手工补。
+
+> 若你的 ORCID 与 Scopus 双向同步，跑一次就等于把 Scopus 的成果同步过来。
+
+## 七、可视化内容管理后台（不用手写 JSON）
+
+```bash
+npm run admin
+```
+
+会自动打开 <http://localhost:5173/#/admin>，功能：
+
+- **顶部切换数据集**：论文成果 / 团队成员 / 科研项目 / 日常活动 / 站点信息
+- **增**：右上角「+ 新增一条」→ 表单填写 → 保存
+- **改**：任意条目点「编辑」→ 改字段 → 保存（立即写回 `src/data/*.json`）
+- **删**：条目右侧「删除」
+- **双语字段**：中/英两个输入框并排，只填中文也能正常显示
+- **站点信息**：字段较多，直接编辑 JSON 文本，保存前自动校验格式
+- **重新构建网站**：一键执行 `npm run build`，产物立即可预览
+- **git 状态**：查看哪些文件被改动
+
+安全边界（已实测）：
+
+- 后端中间件**只在本地 dev server 生效**，生产构建中完全不存在（已验证产物不含后台代码）；
+- 仅允许 `localhost` / `127.0.0.1` 访问；
+- 只允许读写白名单内的 5 个数据文件，路径穿越被拦截；
+- 写入采用临时文件原子替换，JSON 不合法时拒绝写入并报错。
+
+## 八、常见问题
 
 - **双击 index.html 打不开？** 用 `npm run build` 产出的 `dist/index.html`（单文件版）即可，不要在 `src` 上直接改 HTML。
 - **改了 JSON 但页面没变？** 必须重新 `npm run build`；本地开发时用 `npm run dev` 会自动热更新。
