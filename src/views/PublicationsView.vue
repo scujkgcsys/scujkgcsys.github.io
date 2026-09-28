@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n'
 import SectionHeader from '@/components/SectionHeader.vue'
 import PublicationCard from '@/components/PublicationCard.vue'
 import publications from '@/data/publications.json'
+import site from '@/data/site.json'
 import { buildBibtex } from '@/utils/bibtex'
 
 const { t } = useI18n()
@@ -113,6 +114,7 @@ function toggleFilters() {
       :title="t('publications.title')"
       :desc="t('publications.desc')"
       center
+      :cover="site.heroImage"
     />
 
     <!-- 筛选区：可收起，收起后仅保留一条薄摘要 -->

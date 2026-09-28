@@ -33,6 +33,7 @@ const contacts = computed(() => [
       :title="t('contact.title')"
       :desc="t('contact.desc')"
       center
+      :cover="site.heroImage"
     />
 
     <div class="grid gap-8 lg:grid-cols-[1fr_1.1fr]">

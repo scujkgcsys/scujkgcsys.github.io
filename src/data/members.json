@@ -5,15 +5,18 @@
       "zh": "刘展",
       "en": "Zhan Liu"
     },
-    "role": "pi",
+    "role": "teacher",
     "title": {
       "zh": "教授 / 博士生导师",
       "en": "Professor / Ph.D. Supervisor"
     },
+    "badge": {
+      "zh": "课题组创建人",
+      "en": "Founder of the Lab"
+    },
     "email": "bmeliuzhan@163.com",
     "homepage": "https://acem.scu.edu.cn/info/1028/13087.htm",
     "scholar": "",
-    "year": "2016",
     "interests": [
       {
         "zh": "生物医学工程",

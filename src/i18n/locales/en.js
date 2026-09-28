@@ -73,7 +73,7 @@ export default {
     label: 'Members',
     title: 'Faculty and Students',
     desc: 'The lab is led by Prof. Zhan Liu and hosted by the Key Laboratory of Biomechanical Engineering of Sichuan Province. Student records can be updated on this site at any time.',
-    rolePi: 'Principal Investigator',
+    roleTeacher: 'Faculty',
     roleFaculty: 'Faculty',
     rolePhd: 'Ph.D. Students',
     roleMaster: 'Master Students',
@@ -149,6 +149,7 @@ export default {
     contactTitle: 'Contact',
     links: 'Links',
     copyright: 'Copyright © {year} Health Engineering Laboratory, Sichuan University. All rights reserved.',
-    builtWith: 'Built with Vue 3 + Vite'
+    builtWith: 'Built with Vue 3 + Vite',
+    aiImages: 'Decorative illustrations on this site are AI-generated for visualization purposes only and do not depict real experimental data.'
   }
 }

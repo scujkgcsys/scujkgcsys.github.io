@@ -36,16 +36,31 @@ export default {
         content: '1200px'
       },
       boxShadow: {
-        card: '0 1px 2px rgba(16,24,40,.04), 0 8px 24px -12px rgba(16,24,40,.18)'
+        card: '0 1px 2px rgba(16,24,40,.04), 0 8px 24px -12px rgba(16,24,40,.18)',
+        lift: '0 18px 44px -22px rgba(16,24,40,.35)',
+        glow: '0 24px 60px -28px rgba(27,86,241,.55)'
+      },
+      backgroundImage: {
+        'brand-sheen': 'linear-gradient(135deg,#1b56f1 0%,#3179fb 45%,#14b8a6 100%)'
       },
       keyframes: {
         'fade-up': {
           '0%': { opacity: '0', transform: 'translateY(12px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' }
+        },
+        float: {
+          '0%,100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' }
+        },
+        sheen: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '100%': { backgroundPosition: '100% 50%' }
         }
       },
       animation: {
-        'fade-up': 'fade-up .5s cubic-bezier(.22,.61,.36,1) both'
+        'fade-up': 'fade-up .5s cubic-bezier(.22,.61,.36,1) both',
+        float: 'float 7s ease-in-out infinite',
+        sheen: 'sheen 12s ease-in-out infinite alternate'
       }
     }
   },

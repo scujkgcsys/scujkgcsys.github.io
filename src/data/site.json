@@ -27,10 +27,13 @@
       "url": "https://acem.scu.edu.cn/"
     }
   ],
+  "heroImage": "images/hero-lab.jpg",
+  "bannerImage": "images/area-device.jpg",
   "researchAreas": [
     {
       "id": "biomech",
       "icon": "heart",
+      "image": "images/area-biomech.jpg",
       "title": { "zh": "生物医学工程", "en": "Biomedical Engineering" },
       "summary": {
         "zh": "围绕口腔颌面与肌骨系统的结构—功能关系开展生物力学研究，构建个体化三维有限元模型并结合实验验证，服务于疾病的机制阐释与临床方案评估。",
@@ -45,6 +48,7 @@
     {
       "id": "tmj",
       "icon": "eye",
+      "image": "images/area-tmj.jpg",
       "title": { "zh": "颞下颌关节与口腔健康工程", "en": "TMJ & Oral Health Engineering" },
       "summary": {
         "zh": "聚焦颞下颌关节紊乱病（TMD）的运动学表征与力学调控，建立动态关节间隙、螺旋轴等关键指标的测量方法，并发展髁突运动导板等动态调控手段。同时开展正颌外科、隐形矫治与口腔修复相关的生物力学评价。",
@@ -59,6 +63,7 @@
     {
       "id": "device",
       "icon": "chip",
+      "image": "images/area-device.jpg",
       "title": { "zh": "医疗平台及器械开发", "en": "Medical Platforms & Device Development" },
       "summary": {
         "zh": "开展医疗平台与器械的优化设计和性能验证，包括髋关节/膝关节假体界面受力分析、髓内钉固定评价、3D 打印矫形器力学检测、植体 anchorage 评估等工程转化工作。",
@@ -73,6 +78,7 @@
     {
       "id": "material",
       "icon": "sparkles",
+      "image": "images/area-material.jpg",
       "title": { "zh": "仿生与功能材料", "en": "Biomimetic & Functional Materials" },
       "summary": {
         "zh": "受鱼鳞、龙虾、褐鹈鹕等生物结构启发，研发透明柔软、抗裂损的高性能弹性体与水凝胶，并结合框架核酸等新材料开展主动靶向治疗研究。",

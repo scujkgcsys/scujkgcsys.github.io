@@ -56,27 +56,50 @@ function cover(activity) {
       ></div>
 
       <div class="wrap relative py-20 sm:py-28">
-        <div class="max-w-3xl animate-fade-up">
-          <span
-            class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white/80 px-3 py-1 text-xs font-medium text-brand-700"
-          >
-            <span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span>
-            {{ t('hero.badge') }}
-          </span>
-          <h1 class="mt-5 text-4xl font-bold leading-tight tracking-tight text-ink-900 sm:text-5xl">
-            {{ tx(site.name) }}
-          </h1>
-          <p class="mt-3 text-xl font-medium text-brand-700 sm:text-2xl">{{ tx(site.tagline) }}</p>
-          <p class="mt-6 max-w-2xl text-[15px] leading-relaxed text-ink-600">
-            {{ tx(site.intro) }}
-          </p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <button class="btn-primary" @click="router.push('/publications')">
-              {{ t('hero.ctaPrimary') }}
-            </button>
-            <button class="btn-ghost" @click="router.push('/contact')">
-              {{ t('hero.ctaSecondary') }}
-            </button>
+        <div class="grid items-center gap-10 lg:grid-cols-[1.1fr_.9fr]">
+          <div class="animate-fade-up">
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white/80 px-3 py-1 text-xs font-medium text-brand-700 shadow-sm"
+            >
+              <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-500"></span>
+              {{ t('hero.badge') }}
+            </span>
+            <h1 class="mt-5 text-4xl font-bold leading-tight tracking-tight text-ink-900 sm:text-5xl">
+              {{ tx(site.name) }}
+            </h1>
+            <p class="mt-3 text-xl font-medium text-brand-700 sm:text-2xl">{{ tx(site.tagline) }}</p>
+            <p class="mt-6 text-[15px] leading-relaxed text-ink-600">
+              {{ tx(site.intro) }}
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <button class="btn-primary" @click="router.push('/publications')">
+                {{ t('hero.ctaPrimary') }}
+              </button>
+              <button class="btn-ghost" @click="router.push('/contact')">
+                {{ t('hero.ctaSecondary') }}
+              </button>
+            </div>
+          </div>
+
+          <!-- 主题配图 -->
+          <div class="relative animate-fade-up">
+            <div class="overflow-hidden rounded-3xl border border-white/70 shadow-glow">
+              <img
+                :src="site.heroImage"
+                :alt="tx(site.name)"
+                class="h-52 w-full object-cover sm:h-72 lg:h-[360px]"
+              />
+            </div>
+            <div
+              class="glass absolute -bottom-5 -left-4 hidden rounded-2xl px-4 py-3 shadow-card sm:block"
+            >
+              <p class="text-[11px] font-semibold uppercase tracking-widest text-brand-600">
+                {{ tx(site.shortName) }}
+              </p>
+              <p class="mt-0.5 text-xs text-ink-600">
+                {{ tx(site.university) }} · {{ tx(site.affiliation) }}
+              </p>
+            </div>
           </div>
         </div>
 

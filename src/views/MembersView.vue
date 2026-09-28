@@ -12,11 +12,10 @@ const { t } = useI18n()
 const { tx } = useTx()
 
 const groups = [
-  { key: 'pi', role: 'pi', titleKey: 'rolePi' },
-  { key: 'faculty', role: 'faculty', titleKey: 'roleFaculty' },
-  { key: 'phd', role: 'phd', titleKey: 'rolePhd' },
-  { key: 'master', role: 'master', titleKey: 'roleMaster' },
-  { key: 'alumni', role: 'alumni', titleKey: 'roleAlumni' }
+  { key: 'teacher', roles: ['teacher', 'faculty'], titleKey: 'roleTeacher' },
+  { key: 'phd', roles: ['phd'], titleKey: 'rolePhd' },
+  { key: 'master', roles: ['master'], titleKey: 'roleMaster' },
+  { key: 'alumni', roles: ['alumni'], titleKey: 'roleAlumni' }
 ]
 
 const grouped = computed(() =>
@@ -24,7 +23,7 @@ const grouped = computed(() =>
     .map((g) => ({
       ...g,
       title: t(`members.${g.titleKey}`),
-      list: members.filter((m) => m.role === g.role)
+      list: members.filter((m) => g.roles.includes(m.role))
     }))
     .filter((g) => g.list.length > 0)
 )
@@ -39,6 +38,7 @@ const total = computed(() => members.length)
       :title="t('members.title')"
       :desc="t('members.desc')"
       center
+      :cover="site.heroImage"
     />
 
     <p class="mb-12 text-center text-sm text-ink-400">
@@ -54,7 +54,7 @@ const total = computed(() => members.length)
         <span class="h-px flex-1 bg-ink-100"></span>
       </div>
 
-      <div :class="['grid gap-5', g.key === 'pi' ? 'md:grid-cols-1' : 'md:grid-cols-2 xl:grid-cols-3']">
+      <div :class="['grid gap-5', g.key === 'teacher' ? 'md:grid-cols-1' : 'md:grid-cols-2 xl:grid-cols-3']">
         <PersonCard v-for="m in g.list" :key="m.id" :person="m" />
       </div>
     </section>

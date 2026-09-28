@@ -70,6 +70,7 @@ function openLightbox(activity, index = 0) {
       :title="t('activities.title')"
       :desc="t('activities.desc')"
       center
+      cover="images/hero-lab.jpg"
     />
 
     <!-- 控制栏 -->

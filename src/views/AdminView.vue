@@ -42,8 +42,9 @@ const SCHEMAS = {
         key: 'role',
         label: '分组',
         type: 'select',
-        options: ['pi', 'faculty', 'phd', 'master', 'alumni']
+        options: ['teacher', 'phd', 'master', 'alumni']
       },
+      { key: 'badge', label: '角标（如：课题组创建人）', type: 'bilingual' },
       { key: 'title', label: '职务/年级', type: 'bilingual' },
       { key: 'email', label: '邮箱', type: 'text' },
       { key: 'homepage', label: '个人主页', type: 'text' },

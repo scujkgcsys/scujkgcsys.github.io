@@ -48,6 +48,7 @@ const grouped = computed(() => {
       :title="t('research.title')"
       :desc="t('research.desc')"
       center
+      :cover="site.bannerImage"
     />
 
     <!-- 研究方向 -->

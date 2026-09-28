@@ -39,10 +39,18 @@ const isShortBio = computed(() => bio.value.length <= 90)
           </span>
         </h3>
         <p class="mt-0.5 text-sm text-brand-600">{{ tx(person.title) }}</p>
-        <p v-if="person.role !== 'alumni'" class="mt-0.5 text-xs text-ink-400">
+        <div v-if="person.badge" class="mt-1.5">
+          <span class="badge bg-amber-50 text-amber-700 ring-1 ring-inset ring-amber-200">
+            {{ tx(person.badge) }}
+          </span>
+        </div>
+        <!-- 教师/创建人不显示入组年份，仅学生显示 -->
+        <p v-if="person.year && person.role === 'alumni'" class="mt-0.5 text-xs text-ink-400">
+          {{ person.year }}
+        </p>
+        <p v-else-if="person.year && person.role !== 'teacher'" class="mt-0.5 text-xs text-ink-400">
           {{ t('members.enrolled') }} {{ person.year }}
         </p>
-        <p v-else class="mt-0.5 text-xs text-ink-400">{{ person.year }}</p>
       </div>
     </div>
 

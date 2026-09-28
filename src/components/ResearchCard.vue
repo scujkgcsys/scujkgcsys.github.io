@@ -25,20 +25,41 @@ const icon = computed(() => ICONS[props.area.icon] || ICONS.sparkles)
 </script>
 
 <template>
-  <article class="card card-hover h-full p-6">
-    <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-50 text-brand-600">
-      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" v-html="icon" />
-    </span>
-    <h3 class="mt-4 text-lg font-semibold text-ink-900">{{ tx(area.title) }}</h3>
-    <p class="mt-2 text-sm leading-relaxed text-ink-600">{{ tx(area.summary) }}</p>
-    <div class="mt-4 flex flex-wrap gap-1.5">
+  <article class="card card-hover flex h-full flex-col overflow-hidden">
+    <!-- 主题配图（有图时显示横幅，无图时退化为图标） -->
+    <div v-if="area.image" class="relative">
+      <img
+        :src="area.image"
+        :alt="tx(area.title)"
+        class="h-40 w-full object-cover sm:h-44"
+        loading="lazy"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent"></div>
       <span
-        v-for="k in area.keywords"
-        :key="tx(k)"
-        class="badge bg-ink-50 text-ink-600 ring-1 ring-inset ring-ink-100"
+        class="absolute left-5 top-5 grid h-11 w-11 place-items-center rounded-xl bg-white/90 text-brand-600 shadow-card"
       >
-        {{ tx(k) }}
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" v-html="icon" />
       </span>
+    </div>
+
+    <div :class="area.image ? 'flex flex-1 flex-col p-6 pt-1' : 'flex flex-1 flex-col p-6'">
+      <span
+        v-if="!area.image"
+        class="grid h-11 w-11 place-items-center rounded-xl bg-brand-50 text-brand-600"
+      >
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" v-html="icon" />
+      </span>
+      <h3 class="mt-4 text-lg font-semibold text-ink-900">{{ tx(area.title) }}</h3>
+      <p class="mt-2 text-sm leading-relaxed text-ink-600">{{ tx(area.summary) }}</p>
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        <span
+          v-for="k in area.keywords"
+          :key="tx(k)"
+          class="badge bg-ink-50 text-ink-600 ring-1 ring-inset ring-ink-100"
+        >
+          {{ tx(k) }}
+        </span>
+      </div>
     </div>
   </article>
 </template>

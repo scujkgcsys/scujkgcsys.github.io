@@ -71,9 +71,9 @@ export default {
   },
   members: {
     label: '团队成员',
-    title: '学术带头人与团队',
+    title: '老师与团队',
     desc: '实验室由刘展教授领衔，依托生物力学工程省重点实验室开展口腔/肌骨系统健康工程研究。在读研究生与毕业生信息可随时在本站更新。',
-    rolePi: '学术带头人',
+    roleTeacher: '老师',
     roleFaculty: '教师',
     rolePhd: '博士研究生',
     roleMaster: '硕士研究生',
@@ -149,6 +149,7 @@ export default {
     contactTitle: '联系方式',
     links: '常用链接',
     copyright: '版权所有 © {year} 四川大学健康工程实验室。保留所有权利。',
-    builtWith: '由 Vue 3 + Vite 构建'
+    builtWith: '由 Vue 3 + Vite 构建',
+    aiImages: '页面装饰配图由 AI 生成，仅作示意，不代表真实实验图像。'
   }
 }

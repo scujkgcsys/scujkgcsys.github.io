@@ -15,7 +15,7 @@ const CHECKS = [
   },
   {
     path: '/members',
-    keywords: { zh: ['刘展', '学术带头人'], en: ['Zhan Liu', 'Principal Investigator'] }
+    keywords: { zh: ['刘展', '课题组创建人', '老师'], en: ['Zhan Liu', 'Faculty'] }
   },
   { path: '/publications', keywords: { zh: ['BibTeX', 'J Biomech'], en: ['BibTeX', 'J Biomech'] } },
   {

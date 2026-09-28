@@ -95,6 +95,9 @@ const external = computed(() => site.links || [])
       <p class="wrap text-center text-xs text-ink-400">
         {{ t('footer.copyright', { year }) }}
       </p>
+      <p class="wrap mt-1.5 text-center text-[11px] text-ink-400/80">
+        {{ t('footer.aiImages') }}
+      </p>
     </div>
   </footer>
 </template>
