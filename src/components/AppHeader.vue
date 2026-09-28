@@ -29,11 +29,12 @@ function toggleLocale() {
   <header class="sticky top-0 z-40 border-b border-ink-100/80 bg-white/85 backdrop-blur-md">
     <div class="wrap flex h-16 items-center justify-between gap-4">
       <router-link to="/" class="group flex min-w-0 items-center gap-3" @click="open = false">
-        <span
-          class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-sm font-bold text-white shadow-sm"
-        >
-          {{ (site.shortName[locale] || site.shortName.zh).slice(0, 2).toUpperCase() }}
-        </span>
+        <img
+          :src="site.logo"
+          alt="四川大学"
+          class="h-10 w-10 shrink-0 object-contain"
+          loading="eager"
+        />
         <span class="min-w-0">
           <span class="block truncate text-[15px] font-semibold leading-tight text-ink-900">
             {{ tx(site.name) }}

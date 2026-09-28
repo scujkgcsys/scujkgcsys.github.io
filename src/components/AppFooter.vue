@@ -5,7 +5,7 @@ import { useTx } from '@/composables/useTx'
 import { displayEmail, openMail } from '@/utils/contact'
 import site from '@/data/site.json'
 
-const { t, locale } = useI18n()
+const { t } = useI18n()
 const { tx } = useTx()
 
 const year = new Date().getFullYear()
@@ -25,11 +25,12 @@ const external = computed(() => site.links || [])
     <div class="wrap grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
       <div>
         <div class="flex items-center gap-3">
-          <span
-            class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-sm font-bold text-white"
-          >
-            {{ (site.shortName[locale] || site.shortName.zh).slice(0, 2).toUpperCase() }}
-          </span>
+          <img
+            :src="site.logo"
+            alt="四川大学"
+            class="h-10 w-10 shrink-0 object-contain"
+            loading="lazy"
+          />
           <span class="text-[15px] font-semibold text-ink-900">{{ tx(site.name) }}</span>
         </div>
         <p class="mt-4 max-w-xs text-sm leading-relaxed text-ink-600">{{ t('footer.about') }}</p>

@@ -1,4 +1,5 @@
 {
+  "logo": "images/scu-logo.png",
   "name": { "zh": "健康工程实验室", "en": "Health Engineering Laboratory" },
   "shortName": { "zh": "HEL", "en": "HEL" },
   "affiliation": { "zh": "建筑与环境学院", "en": "College of Architecture and Environment" },
