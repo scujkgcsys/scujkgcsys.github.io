@@ -100,6 +100,8 @@ export default {
     sortYearAsc: 'Year (old to new)',
     sortVenue: 'Venue (A–Z)',
     highlightOnly: 'Selected only',
+    showFilters: 'Show filters',
+    hideFilters: 'Hide filters',
     bibtex: 'BibTeX',
     copyBibtex: 'Copy BibTeX',
     exportAll: 'Export current results',

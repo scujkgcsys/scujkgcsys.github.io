@@ -100,6 +100,8 @@ export default {
     sortYearAsc: '年份（旧→新）',
     sortVenue: '按发表载体',
     highlightOnly: '仅看代表作',
+    showFilters: '展开筛选',
+    hideFilters: '收起筛选',
     bibtex: 'BibTeX',
     copyBibtex: '复制 BibTeX',
     exportAll: '导出当前筛选结果',

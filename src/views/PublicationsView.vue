@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import SectionHeader from '@/components/SectionHeader.vue'
 import PublicationCard from '@/components/PublicationCard.vue'
@@ -13,6 +13,12 @@ const year = ref('all')
 const type = ref('all')
 const sort = ref('year-desc')
 const highlightOnly = ref(false)
+const filtersOpen = ref(true)
+
+// 手机端默认收起筛选栏，避免占用过多屏幕空间
+onMounted(() => {
+  if (window.matchMedia('(max-width: 767px)').matches) filtersOpen.value = false
+})
 
 const years = computed(() => [
   ...new Set(publications.map((p) => Number(p.year)))
@@ -81,6 +87,23 @@ function exportBib() {
 const hasFilter = computed(
   () => keyword.value || year.value !== 'all' || type.value !== 'all' || highlightOnly.value
 )
+
+// 收起状态下的筛选条件摘要（如：2024 · 期刊论文 · 仅代表作 · 关键词）
+const activeSummary = computed(() => {
+  const parts = []
+  if (year.value !== 'all') parts.push(String(year.value))
+  if (type.value !== 'all') {
+    const tp = types.find((x) => x.key === type.value)
+    if (tp) parts.push(t(tp.labelKey))
+  }
+  if (highlightOnly.value) parts.push(t('publications.highlightOnly'))
+  if (keyword.value.trim()) parts.push(`“${keyword.value.trim()}”`)
+  return parts
+})
+
+function toggleFilters() {
+  filtersOpen.value = !filtersOpen.value
+}
 </script>
 
 <template>
@@ -92,9 +115,54 @@ const hasFilter = computed(
       center
     />
 
-    <!-- 筛选区 -->
-    <div class="card sticky top-[72px] z-20 mb-10 p-5">
-      <div class="flex flex-col gap-4">
+    <!-- 筛选区：可收起，收起后仅保留一条薄摘要 -->
+    <div class="card sticky top-[72px] z-20 mb-10">
+      <!-- 开关行：始终可见 -->
+      <div
+        class="flex flex-wrap items-center gap-3 px-5 pt-4"
+        :class="filtersOpen ? '' : 'pb-4'"
+      >
+        <button
+          class="inline-flex shrink-0 items-center gap-2 rounded-xl border border-ink-200 bg-white px-3 py-2 text-sm font-semibold text-ink-700 transition hover:border-brand-300 hover:text-brand-600"
+          :aria-expanded="filtersOpen"
+          @click="toggleFilters"
+        >
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 5h18l-7 8v5.5L10 21v-8L3 5Z" stroke-linejoin="round" />
+          </svg>
+          {{ filtersOpen ? t('publications.hideFilters') : t('publications.showFilters') }}
+          <svg
+            class="h-3.5 w-3.5 transition-transform duration-200"
+            :class="filtersOpen ? 'rotate-180' : ''"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <!-- 收起时显示当前筛选条件摘要 -->
+        <div
+          v-if="!filtersOpen && activeSummary.length"
+          class="flex min-w-0 flex-1 flex-wrap items-center gap-1.5"
+        >
+          <span
+            v-for="s in activeSummary"
+            :key="s"
+            class="max-w-[10rem] truncate rounded-full bg-brand-50 px-2.5 py-1 text-xs font-medium text-brand-700"
+          >
+            {{ s }}
+          </span>
+        </div>
+        <p v-if="!filtersOpen" class="ml-auto shrink-0 text-xs text-ink-400">
+          {{ t('publications.paperCount', { n: filtered.length }) }}
+        </p>
+      </div>
+
+      <!-- 筛选主体：可折叠 -->
+      <div v-show="filtersOpen" class="flex flex-col gap-4 px-5 pb-5 pt-3">
         <div class="flex flex-col gap-3 sm:flex-row">
           <div class="relative flex-1">
             <svg
