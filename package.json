@@ -10,6 +10,7 @@
     "smoke": "node scripts/ssr-smoke.mjs",
     "check:file": "node scripts/check-file-protocol.mjs",
     "admin": "vite --open /#/admin",
+    "cms": "node scripts/cms-server.mjs",
     "sync:orcid": "node scripts/sync-orcid.mjs"
   },
   "dependencies": {

@@ -5,3 +5,4 @@ dist/
 .vite/
 vite.config.js.timestamp-*.mjs
 .workbuddy/
+.cms-backups/

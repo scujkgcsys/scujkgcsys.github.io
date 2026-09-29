@@ -54,7 +54,7 @@ export default {
   research: {
     label: 'Research',
     title: 'Research Directions and Projects',
-    desc: 'Hosted by the Key Laboratory of Biomechanical Engineering, the lab focuses on oral and musculoskeletal health engineering, biomimetic materials and medical device development.',
+    desc: 'Hosted by the University Key Laboratory of Biomechanical Engineering (Sichuan Provincial Department of Education), the lab focuses on oral and musculoskeletal health engineering, biomimetic materials and medical device development.',
     areasSub: 'Research directions',
     projectsSub: 'Funded projects',
     projectRole: 'Role',
@@ -72,7 +72,7 @@ export default {
   members: {
     label: 'Members',
     title: 'Faculty and Students',
-    desc: 'The lab is led by Prof. Zhan Liu and hosted by the Key Laboratory of Biomechanical Engineering of Sichuan Province. Student records can be updated on this site at any time.',
+    desc: 'The lab is led by Prof. Zhan Liu and hosted by the University Key Laboratory of Biomechanical Engineering, Sichuan Provincial Department of Education. Student records can be updated on this site at any time.',
     roleTeacher: 'Faculty',
     roleFaculty: 'Faculty',
     rolePhd: 'Ph.D. Students',

@@ -148,7 +148,7 @@ export PATH="/c/Users/11876/.workbuddy/binaries/node/versions/22.22.2-3:$PATH"
   "id": "act-2026-09",
   "date": "2026-09-20",
   "category": "seminar",
-  "location": { "zh": "生物力学工程省重点实验室", "en": "Key Lab of Biomechanical Engineering" },
+  "location": { "zh": "生物力学工程四川省教育厅高校重点实验室", "en": "University Key Laboratory of Biomechanical Engineering (Sichuan Provincial Department of Education)" },
   "title": { "zh": "活动标题", "en": "Event title" },
   "desc": { "zh": "活动描述", "en": "Description" },
   "images": ["images/act1.jpg", "images/act2.jpg"]
@@ -269,6 +269,26 @@ npm run sync:orcid 0000-xxxx-xxxx  # 也可指定其他 ORCID
 > 若你的 ORCID 与 Scopus 双向同步，跑一次就等于把 Scopus 的成果同步过来。
 
 ## 七、可视化内容管理后台（不用手写 JSON）
+
+### 方式 A：独立后台（推荐，一条命令启动）
+
+```bash
+npm run cms
+```
+
+会自动启动本地服务并打开浏览器（默认 <http://127.0.0.1:5178/>，端口被占用时自动顺延）。功能：
+
+- **左侧数据集**：站点信息 / 团队成员 / 论文成果 / 科研项目 / 科研动态，带搜索框（论文 142 条也能快速定位）
+- **字段自动识别**：`{zh,en}` 双语字段渲染成「中文 / English」两个输入框；数组双语（研究兴趣）渲染成可增删的行；长文本自动变多行框；布尔值渲染成勾选框；复杂嵌套（如 `researchAreas`）用 JSON 文本框编辑
+- **增 / 改 / 删**：顶部「+ 新增条目」按数据集自动套模板；条目右上角「删除本条」；改完点「保存更改」写回 `src/data/*.json`
+- **一键构建**：「重新构建网站」直接执行 `npm run build`，刷新页面即可看到效果
+- **git 状态**：查看本次改了哪些文件
+- **自动备份**：每次保存前把原文件备份到 `.cms-backups/`（每个数据集保留最近 20 份，误删可回溯）
+- **安全边界**：只监听 127.0.0.1（外部机器访问不到）；只允许读写白名单内 5 个数据文件，路径穿越被拦截；类型不符或 JSON 非法时拒绝写入；写入采用临时文件 + 原子替换
+
+> 提示：后台改完只是改了本地文件，仍要 `git push` 才会同步到线上站点。
+
+### 方式 B：Vite 内置后台（需先 `npm run dev`）
 
 ```bash
 npm run admin
