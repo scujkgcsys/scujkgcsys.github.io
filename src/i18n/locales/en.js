@@ -149,6 +149,6 @@ export default {
     contactTitle: 'Contact',
     links: 'Links',
     copyright: 'Copyright © {year} Health Engineering Laboratory, Sichuan University. All rights reserved.',
-    aiImages: 'Decorative illustrations on this site are AI-generated for visualization purposes only and do not depict real experimental data.'
+    aiImages: 'Decorative illustrations on this site are for visualization purposes only and do not depict real experimental data.'
   }
 }

@@ -149,6 +149,6 @@ export default {
     contactTitle: '联系方式',
     links: '常用链接',
     copyright: '版权所有 © {year} 四川大学健康工程实验室。保留所有权利。',
-    aiImages: '页面装饰配图由 AI 生成，仅作示意，不代表真实实验图像。'
+    aiImages: '页面装饰配图仅作示意，不代表真实实验图像。'
   }
 }
