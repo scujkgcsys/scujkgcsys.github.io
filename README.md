@@ -6,6 +6,19 @@
 
 ## 一、本地运行与发布
 
+### 零命令方式（推荐，双击即可，不需要安装 Node）
+
+| 双击 | 作用 |
+| --- | --- |
+| `start-cms.bat` | 打开可视化内容管理后台，改完点「保存更改」写回 JSON |
+| `start-build.bat` | 一键构建，生成单文件 `dist/index.html`（可直接双击预览） |
+| `start-push.bat` | 询问提交说明 → 提交 → 推送到 GitHub（1–2 分钟后线上自动更新） |
+
+典型流程：**改内容 `start-cms.bat` → 构建 `start-build.bat` → 推送 `start-push.bat`**。
+三个脚本都自动优先使用系统里的 node，找不到时回退到 WorkBuddy 自带版本。
+
+### 命令行方式
+
 ```bash
 # 首次安装依赖（Node 18+，本机受管版本路径见下）
 npm install
