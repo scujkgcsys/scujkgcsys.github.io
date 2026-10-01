@@ -34,7 +34,6 @@ const external = computed(() => site.links || [])
           <span class="text-[15px] font-semibold text-ink-900">{{ tx(site.name) }}</span>
         </div>
         <p class="mt-4 max-w-xs text-sm leading-relaxed text-ink-600">{{ t('footer.about') }}</p>
-        <p class="mt-4 text-xs text-ink-400">{{ t('footer.builtWith') }}</p>
       </div>
 
       <div>
